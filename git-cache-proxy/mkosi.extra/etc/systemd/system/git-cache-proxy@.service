@@ -1,0 +1,15 @@
+[Unit]
+Description=Run git-cache-proxy for %i
+
+[Service]
+EnvironmentFile=/etc/git-cache-proxy/%i.env
+ExecStart=/usr/bin/git-cache-proxy
+Type=exec
+User=git-cache-proxy
+ProtectSystem=full
+ProtectHome=on
+PrivateDevices=on
+NoNewPrivileges=on
+
+[Install]
+WantedBy=multi-user.target

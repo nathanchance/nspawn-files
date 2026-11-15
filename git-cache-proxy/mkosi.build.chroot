@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+CARGO_HOME=$BUILDDIR/cargo \
+    cargo install \
+    --bin git-cache-proxy \
+    --root $DESTDIR \
+    git-cache-proxy
