@@ -53,6 +53,10 @@ run0 systemd-nspawn \
 
 sed -i 's;^Listen 80;Listen 50000;g' /etc/httpd/conf/httpd.conf
 
+if ! grep -q cgitrc.git-mirror /etc/cgitrc; then
+    echo 'include=/etc/cgitrc.git-mirror' >>/etc/cgitrc
+fi
+
 systemd-tmpfiles --create /etc/tmpfiles.d/00-git-mirror.conf
 
 grok-pull -c /etc/grokmirror/grokmirror.conf -v

@@ -1,0 +1,2 @@
+scan-path=/var/lib/git-mirror
+source-filter=/usr/libexec/cgit/filters/syntax-highlighting.py
