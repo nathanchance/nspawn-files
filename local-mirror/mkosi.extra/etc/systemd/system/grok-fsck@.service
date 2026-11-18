@@ -9,5 +9,5 @@ EnvironmentFile=-/etc/default/grokmirror
 EnvironmentFile=-/etc/default/grokmirror.%i
 ExecStart=/usr/bin/grok-fsck -c /etc/grokmirror/%i.conf $EXTRA_FSCK_OPTS
 CPUSchedulingPolicy=batch
-User=apache
-Group=apache
+User=nginx
+Group=nginx

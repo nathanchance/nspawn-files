@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/grok-dumb-pull %f
-User=apache
+User=nginx
 
 [Install]
 WantedBy=multi-user.target

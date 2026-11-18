@@ -1,4 +1,0 @@
-enable every-5-minutes@.timer grok-dumb-pull@var-lib-git\x2dmirror-llvm-llvm\x2dproject.git
-enable grok-fsck@.timer grokmirror
-enable grok-pull@.service grokmirror
-enable httpd.service
