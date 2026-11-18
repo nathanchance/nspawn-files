@@ -22,8 +22,7 @@ PrivateUsersOwnership=auto
 
 [Network]
 VirtualEthernet=no"
-set fish_trace 1
-if not test -e $nspawn_file; or test "$old_nspawn_file_text" != "$new_nspawn_file_text"
+if not test -e $nspawn_file; or test (echo "$old_nspawn_file_text" | tr -d "[:space:]") != (echo "$new_nspawn_file_text" | tr -d "[:space:]")
     header "Updating "(path basename $nspawn_file)
 
     echo "$new_nspawn_file_text" | run0 tee $nspawn_file

@@ -34,6 +34,9 @@ def setup_grokmirror():
 def main():
     setup_grokmirror()
 
+    print('[+] Validating nginx configuration')
+    subprocess.run(['nginx', '-t'], check=True)
+
 
 if __name__ == '__main__':
     main()
